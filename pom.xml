@@ -95,6 +95,26 @@
 					</execution>
 				</executions>
 			</plugin>
+			           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>jaxb2-maven-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+                <execution>
+                    <id>id1</id>
+                    <goals>
+                        <goal>xjc</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>src/main/java</outputDirectory>
+                        <clearOutputDir>false</clearOutputDir>
+                        <packageName>com.subu.xsd.model</packageName>
+                        <schemaDirectory>src/main/java/schemadir</schemaDirectory>
+                        <schemaFiles>XYZ.xsd</schemaFiles>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
